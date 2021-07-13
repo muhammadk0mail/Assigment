@@ -186,3 +186,347 @@ for(var i=0;i<str.length;i++){
     // document.write(str.slice(i,i+3)+'<br>')
 }
 */
+
+// --------------------------------------
+
+// Chapter 26-30
+
+
+// 1. Write a program that takes a positive integer from user & display the following in your browser.
+// a. number
+// b. round off value of the number
+// c. floor value of the number
+// d. ceil value of the number
+/*
+var num = 3.14234;
+var roundof = Math.round(num);
+var cielof = Math.ceil(num);
+var floorof = Math.floor(num);
+
+document.write('Round of Value: '+roundof +'<br><br>');
+document.write('Ciel of Value: '+cielof +'<br><br>');
+document.write('Floor of Value: '+floorof +'<br><br>');*/
+
+
+// 2. Write a program that takes a negative floating point number from user & display the following in your
+// browser.
+// a. number
+// b. round off value of the number
+// c. floor value of the number
+// d. ceil value of the number
+
+/*
+
+var num = -3.14234;
+var roundof = Math.round(num);
+var cielof = Math.ceil(num);
+var floorof = Math.floor(num);
+
+document.write('Round of Value: '+roundof +'<br><br>');
+document.write('Ciel of Value: '+cielof +'<br><br>');
+document.write('Floor of Value: '+floorof +'<br><br>');
+*/
+
+// 3. Write a program that displays the absolute value of a number.
+// E.g. absolute value of -4 is 4 & absolute value of 5 is 5
+
+/*
+var Nun = prompt("enter a value to find the prompt value"); 
+    if (Num < 0) 
+        {
+            Num = (-1) * Num;
+            document.write(" " + Num);
+        }
+    else
+        {
+        document.write(" " + Num);
+        }
+*/
+
+// 4. Write a program that simulates a dice using random() method of JS Math class.
+// Display the value of dice in your browser:
+/*
+var randomNumber = Math.random();
+var afterConvertingInToWholeNumbers = Math.floor((randomNumber*6)+1);
+
+alert('The Dice value is: '+afterConvertingInToWholeNumbers);
+*/
+
+// 6. Write a program that shows a random number between 1 and 100 in your browser
+/*
+var randomNumber = Math.random();
+var afterConvertingInToWholeNumbers = Math.floor((randomNumber*100)+1);
+
+alert('random number between 1 to 100 is : '+afterConvertingInToWholeNumbers);
+*/
+
+// 7. Write a program that asks the user about his weight. Parse the user input and display his weight
+// in your browser. Possible user inputs can be:
+// a. 50
+// b. 50kgs
+// c. 50.2kgs
+// d. 50.2kilograms
+
+/*
+var kg = prompt('enter your weight');
+var prettyTotal = kg.toFixed(1);
+
+prettyTotal = prettyTotal.slice(0,3).toLowerCase()
+
+for(var i=0; i<prettyTotal.length; i++){
+        alert(prettyTotal.slice(0,3))
+    
+}
+*/
+
+// 8. Write a program that stores a random secret number from 
+// 1 to 10 in a variable. Ask the user to input a number 
+// between 1 and 10. If the user input equals the secret 
+// number, congratulate the user.
+
+/*
+var userinput = prompt('enter a value to check whether the value is matched or not From (1-10)');
+var num = Math.random();
+var afterConvertingInToWholeNumbers = Math.floor((num*10)+1);
+ 
+if (userinput == afterConvertingInToWholeNumbers)
+{
+    alert('You have succesfully guess the value');
+}
+else{
+    alert('Tryagain Sorry you have guess wrong value');
+}
+*/
+
+
+// Chapter 31-34
+
+
+// 1. Write a program that displays current date and time in your browser.
+/*
+var date = new Date;
+document.write(date);
+*/
+
+// 2. Write a program that alerts the current month in words. For example December.
+/*
+var date = new Date;
+
+if(date.getMonth() == 0)
+    {
+        alert('Current Month is: January');
+    }
+else if(date.getMonth() == 1)
+    {
+        alert('Current Month is: febuary');
+    }
+    else if(date.getMonth() == 2)
+    {
+        alert('Current Month is: March');
+    }
+    else if(date.getMonth() == 3)
+    {
+        alert('Current Month is: April');
+    }else if(date.getMonth() == 4)
+    {
+        alert('Current Month is: May');
+    }else if(date.getMonth() == 5)
+    {
+        alert('Current  Month is: June');
+    }else if(date.getMonth() == 6)
+    {
+        alert('Current Month is: july');
+    }else if(date.getMonth() == 7)
+    {
+        alert('Current Month is: August');
+    }else if(date.getMonth() == 8)
+    {
+        alert('Current Month is: September');
+    }
+    else if(date.getMonth() == 9)
+    {
+        alert('Current Month is: October');
+    }
+    else if(date.getMonth() == 10)
+    {
+        alert('Current Month is: November');
+    }
+    else{
+        alert('Current Month is: December'); 
+    }
+*/
+
+// 3. Write a program that alerts the first 3 letters of the current day,
+// for example if today is Sunday then alert will show Sun.
+
+/*
+var date = new Date;
+
+if(date.getDay() == 0)
+    {
+        alert('Current Month is: Sunday');
+    }
+else if(date.getDay() == 1)
+    {
+        alert('Current Month is: Monday');
+    }
+else if(date.getDay() == 2)
+{
+    alert('Current Month is: Tuesday');
+}
+else if(date.getDay() == 3)
+{
+    alert('Current Month is: Wednesday');
+}
+else if(date.getDay() == 4)
+{
+    alert('Current Month is: Thursday');
+}
+else if(date.getDay() == 5)
+{
+    alert('Current Month is: Friday');
+}
+else if(date.getDay() == 6)
+{
+    alert('Current Month is: Saturday');
+}
+*/
+
+// 4. Write a program that displays a message “It’s Fun day” if its Saturday or Sunday today.
+
+/*
+var date = new Date;
+if(date.getDay() == 6 || date.getDay() == 0){
+    alert('Its a Fun day');
+}
+else{
+    alert('Its a Work day');
+}
+*/
+
+// 5. Write a program that shows the message “First fifteen days of the month”
+// if the date is less than 16th of the month 
+// else shows “Last days of the month”.
+/*
+var date = new Date;
+if (date.getDate()<16)
+    {
+        alert('First fifteen days of the month');
+    }
+else{
+    alert('Last days of the month');
+}
+*/
+
+// 6. Write a program that determines the minutes since midnight, Jan. 1, 1970
+// and assigns it to a variable that hasn't been declared beforehand. Use any variable you like 
+// to represent the Date object.
+
+/*
+var date = new Date;
+var mint = date.getTime();
+alert(mint);
+*/
+
+// 7. Write a program that tests whether it's before noon and 
+// alert “Its AM” else “its PM”.
+/*
+var date = new Date;
+
+if(date.getHours() < 12)
+{
+    alert('its AM');
+}
+else{
+    alert('its PM');
+}
+*/
+// 8. Write a program that creates a Date object for the last day of the last month of 2020
+// and assigns it to variable named laterDate.
+/*
+var laterDate = new Date('Dec 31, 2021');
+alert('Later date is: '+ laterDate);
+*/
+
+// 9. Create a date object of the starting date of this Ramadan 
+// and alert the number of days past since 1st Ramadan?
+// Note: 1st Ramadan was on June 18, 2015
+
+/*
+var date = new Date();
+var pastdate = new Date("June 30, 2015");
+numOfDays=Math.round((date - pastdate) / (1000 * 60 * 60 * 24));
+alert(numOfDays + ' days have passed since 1st Ramadan, 2015');
+*/
+
+
+// 10. Write a program that displays in your browser the seconds that elapsed between the reference date
+// and the beginning of 2015.
+/*
+var date = new Date();
+var pastdate = new Date("Jan 01, 2015");
+numOfDays=Math.round((date - pastdate));
+alert('On Refrence date '+pastdate + ' , ' + numOfDays +' second has passed since beginning of 2015');
+*/
+
+// 11. Create a Date object for the current date and time. 
+// Extract the hours, reset the date object an hour ahead and 
+// finally display the date object in your browser.
+
+// var date = new date();
+// var lasthour = new date("13:15:00");
+// alert(lasthour);
+
+
+// 12. Write a program that creates a date object and show the 
+// date in an alert box that is reset to 100 years back?
+/*
+var date = new Date();
+var pastdate = new Date("1921");
+alert(' Current date '+date + ' 100 year back date: '+pastdate);
+*/
+
+// 13. Write a program to ask the user about his age. Calculate 
+// and show his birth year in your browser.
+/*
+var date1 = new Date;
+var date = date1.getFullYear();
+var age = prompt('Enter your age');
+
+var birthyear = (date - age) 
+alert(birthyear);
+*/
+
+// 14. Write a program to generate your K-Electric bill in your browser.
+// All the amounts should be rounded off to 2 decimal places. Display the following fields:
+// a. Customer Name
+// b. Current Month
+// c. Number of units
+// d. Charges per unit
+// e. Net Amount Payable (within Due Date)
+// f. Late Payment Surcharge
+// g. Gross Amount Payable (after Due Date)
+
+/*
+var date = new Date;
+var heading = 'K Electric Bill';
+var Customer_Name = 'Muhammad Komail';
+var month = 'Febuary';
+var unit = 410;
+var CPunit = 16;
+var lsc = 350;
+
+document.write('<h1>'+heading +'</h1> ');
+document.write('Custumer Name:'+Customer_Name +'<br>');
+document.write('Month:'+ month +'<br>');
+document.write('Unit:'+unit +'<br>');
+document.write('Charges per unit:'+CPunit +'<br>');
+
+var nap =  unit * CPunit;
+var gap = nap + lsc;
+
+document.write('Net Amount Payable (within Due Date) :' + nap + '<br>');
+document.write('Late Payment Surcharge: '+ lsc + '<br>')
+document.write(' Gross Amount Payable (after Due Date) :' + gap + '<br>');
+
+*/
